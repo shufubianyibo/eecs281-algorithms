@@ -4,7 +4,29 @@ C++ graph search, priority queues, database queries, minimum spanning trees, and
 
 Coursework portfolio of **Han Sun ([shufubianyibo](https://github.com/shufubianyibo))**. This repository collects source snapshots from local projects so they can be browsed directly from my personal GitHub profile.
 
-## Projects
+## Main projects
+
+### [Graph optimization: MST and traveling salesperson — Project 4](p4-among-us/)
+
+A C++ command-line solver with three modes: a minimum spanning tree under region constraints, a fast heuristic tour, and an exact traveling salesperson search. The exact solver starts from an insertion-based tour improved with 2-opt, then uses branch-and-bound with an MST-based lower bound over the remaining vertices. This project brings together greedy construction, local improvement, and pruning of a combinatorial search space.
+
+The core implementation is [`AmongUs.hpp`](p4-among-us/AmongUs.hpp); [`main.cpp`](p4-among-us/main.cpp) provides the command-line entry. Sample inputs and expected outputs cover the different modes.
+
+### [SillyQL: an in-memory query engine — Project 3](p3-sillyql/)
+
+A small relational database interpreter supporting table creation, insertion, conditional selection, deletion, joins, and index generation. Hash and ordered-tree indexes provide different lookup strategies, and index contents are rebuilt as the stored rows change. The project connects query semantics with concrete choices of data structure.
+
+Start with [`command.hpp`](p3-sillyql/command.hpp) for table storage, filtering, and indexing, and [`silly.cpp`](p3-sillyql/silly.cpp) for command handling.
+
+### [Priority queue implementations — Project 2B](p2b-priority-queues/)
+
+Several interchangeable priority queues implement a common C++ interface, including sorted storage, a binary heap, and a pairing heap. The pairing heap adds node-based melding and priority updates, while the shared interface makes it possible to compare designs without changing client code.
+
+Compare [`BinaryPQ.hpp`](p2b-priority-queues/BinaryPQ.hpp), [`PairingPQ.hpp`](p2b-priority-queues/PairingPQ.hpp), and [`SortedPQ.hpp`](p2b-priority-queues/SortedPQ.hpp).
+
+Other substantial coursework includes [grid routing with stack/queue search](p1-rescue-the-countess/) and a [priority-driven simulation](p2-the-walking-deadline/). Smaller lab folders remain available in the full index below.
+
+## All projects
 
 | Project | Source files |
 | --- | ---: |
