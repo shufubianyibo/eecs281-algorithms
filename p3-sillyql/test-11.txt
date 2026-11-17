@@ -1,0 +1,19 @@
+# After DELETE, index must be rebuilt on the GENERATE column
+CREATE data 3 int string bool id tag active
+INSERT INTO data 6 ROWS
+1 alpha true
+2 beta false
+3 alpha true
+4 gamma false
+5 beta true
+6 alpha false
+GENERATE FOR data hash INDEX ON tag
+DELETE FROM data WHERE active = false
+PRINT FROM data 2 id tag WHERE tag = alpha
+PRINT FROM data 2 id tag WHERE tag = beta
+PRINT FROM data 2 id tag WHERE tag = gamma
+GENERATE FOR data bst INDEX ON id
+PRINT FROM data 2 id tag WHERE id > 1
+DELETE FROM data WHERE tag = beta
+PRINT FROM data 2 id tag ALL
+QUIT

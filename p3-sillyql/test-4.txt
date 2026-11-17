@@ -1,0 +1,38 @@
+CREATE t1 3 int string int id name score
+INSERT INTO t1 4 ROWS
+1 Alice 10
+2 Bob 20
+3 Carol 30
+4 Dave 40
+GENERATE FOR t1 hash INDEX ON id
+DELETE FROM t1 WHERE score = 20
+PRINT FROM t1 3 id name score WHERE id = 4
+DELETE FROM t1 WHERE score = 999
+PRINT FROM t1 3 id name score WHERE id = 1
+CREATE t2 1 int id
+GENERATE FOR t2 bst INDEX ON id
+INSERT INTO t2 3 ROWS
+10
+20
+30
+PRINT FROM t2 1 id WHERE id = 30
+PRINT FROM t2 1 id WHERE id < 20
+PRINT FROM t2 1 id WHERE id > 20
+CREATE t3 2 string string col1 col2
+INSERT INTO t3 2 ROWS
+col1 match
+col2 nomatch
+PRINT FROM t3 2 col1 col2 WHERE col1 = col1
+CREATE outer 1 int id
+INSERT INTO outer 2 ROWS
+20
+10
+JOIN outer AND t2 WHERE id = id AND PRINT 2 id 1 id 2
+JOIN bad1 AND bad2 WHERE id = id AND PRINT 1 id 1
+JOIN t2 AND t2 WHERE bad_where = id AND PRINT 1 bad_print 1
+PRINT FROM t2 1 bad_print WHERE bad_where = 5
+CREATE empty 2 int string id val
+INSERT INTO empty 0 ROWS
+DELETE FROM empty WHERE id = 5
+PRINT FROM empty 2 id val ALL
+QUIT

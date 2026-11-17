@@ -1,0 +1,9 @@
+L
+2
+3
+// Room 0: Start at 0,0, pipe at 0,1
+(0,0,0,S)
+(0,0,1,1)
+// Room 1: Arrival at 0,1, walk to Countess at 0,2
+(1,0,2,C)
+(1,0,0,C)

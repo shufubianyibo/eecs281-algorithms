@@ -1,0 +1,21 @@
+# Table isolation: operations on one table must not affect another
+CREATE A 2 int string id val
+INSERT INTO A 3 ROWS
+1 alpha
+2 beta
+3 gamma
+CREATE B 2 int string id val
+INSERT INTO B 3 ROWS
+10 ten
+20 twenty
+30 thirty
+GENERATE FOR A bst INDEX ON id
+PRINT FROM A 2 id val WHERE id > 1
+PRINT FROM B 2 id val ALL
+DELETE FROM A WHERE id = 2
+PRINT FROM A 2 id val ALL
+PRINT FROM B 2 val id ALL
+GENERATE FOR B hash INDEX ON val
+PRINT FROM B 2 id val WHERE val = ten
+PRINT FROM A 2 id val WHERE id > 1
+QUIT

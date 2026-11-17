@@ -1,0 +1,32 @@
+CREATE t1 2 int string id val1
+INSERT INTO t1 2 ROWS
+1 a
+2 b
+CREATE t2 2 int string id val2
+INSERT INTO t2 2 ROWS
+1 x
+3 y
+CREATE t1 1 int dummy
+INSERT INTO bad_table 2 ROWS
+PRINT FROM t1 1 bad_print WHERE bad_where = 5
+PRINT FROM t1 2 bad1 bad2 ALL
+PRINT FROM t1 2 id bad2 ALL
+JOIN bad_table AND t2 WHERE id = id AND PRINT 1 id 1
+JOIN t1 AND bad_table WHERE id = id AND PRINT 1 id 1
+JOIN t1 AND t2 WHERE bad1 = bad2 AND PRINT 1 bad_print 1
+JOIN t1 AND t2 WHERE id = bad2 AND PRINT 1 bad_print 1
+JOIN t1 AND t2 WHERE id = id AND PRINT 1 val2 1
+JOIN t1 AND t2 WHERE id = id AND PRINT 1 val1 2
+GENERATE FOR t1 hash INDEX ON id
+GENERATE FOR t1 bst INDEX ON bad_col
+PRINT FROM t1 1 val1 WHERE id = 1
+PRINT FROM t1 3 id val1 id ALL
+DELETE FROM bad_table WHERE bad_col = 5
+DELETE FROM t1 WHERE bad_where = 5
+CREATE t3 2 int int id1 id2
+INSERT INTO t3 2 ROWS
+1 2
+2 1
+JOIN t1 AND t3 WHERE id = id1 AND PRINT 2 id 1 id2 2
+JOIN t1 AND t3 WHERE id = id2 AND PRINT 2 id 1 id1 2
+QUIT

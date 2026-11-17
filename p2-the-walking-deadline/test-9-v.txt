@@ -1,0 +1,15 @@
+# jump round
+quiver-capacity: 1
+random-seed: 10
+max-rand-distance: 100
+max-rand-speed: 10
+max-rand-health: 10
+---
+round: 1
+random-zombies: 0
+named-zombies: 1
+SlowKiller distance: 4 speed: 1 health: 100
+---
+round: 5
+random-zombies: 0
+named-zombies: 0

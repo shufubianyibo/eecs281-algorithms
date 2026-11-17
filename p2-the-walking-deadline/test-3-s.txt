@@ -1,0 +1,13 @@
+# all same
+quiver-capacity: 10
+random-seed: 10
+max-rand-distance: 100
+max-rand-speed: 20
+max-rand-health: 1
+---
+round: 1
+random-zombies: 0
+named-zombies: 3
+Z1 distance: 10 speed: 1 health: 1
+Z2 distance: 10 speed: 1 health: 1
+Z3 distance: 10 speed: 1 health: 1

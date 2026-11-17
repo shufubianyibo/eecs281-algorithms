@@ -1,0 +1,14 @@
+# median same
+quiver-capacity: 10
+random-seed: 10
+max-rand-distance: 100
+max-rand-speed: 10
+max-rand-health: 10
+---
+round: 1
+random-zombies: 0
+named-zombies: 4
+A_QuickDie distance: 10 speed: 10 health: 1
+B_SlowDie  distance: 10 speed: 10 health: 3
+C_MidDie   distance: 10 speed: 10 health: 2
+D_LongDie  distance: 10 speed: 10 health: 4

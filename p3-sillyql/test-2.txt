@@ -1,0 +1,17 @@
+# Program must continue after every error, not exit
+CREATE t 2 int string id name
+INSERT INTO t 3 ROWS
+1 Alice
+2 Bob
+3 Carol
+# Error: table doesn't exist
+PRINT FROM ghost 1 id ALL
+# Program must still work after error
+PRINT FROM t 2 id name ALL
+# Error: column doesn't exist in WHERE
+PRINT FROM t 1 id WHERE ghost = foo
+PRINT FROM t 1 name WHERE id = 2
+PRINT FROM t 3 id ghost name ALL
+DELETE FROM t WHERE id > 1
+PRINT FROM t 2 id name ALL
+QUIT

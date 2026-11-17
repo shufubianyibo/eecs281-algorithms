@@ -1,0 +1,20 @@
+# Test JOIN: basic join, multiple matches, no match, error cases
+CREATE dept 2 int string dept_id dept_name
+INSERT INTO dept 3 ROWS
+1 Engineering
+2 Marketing
+3 Finance
+CREATE emp 3 int string int emp_id name dept_id
+INSERT INTO emp 6 ROWS
+101 Alice 1
+102 Bob 2
+103 Carol 1
+104 Dave 4
+105 Eve 3
+106 Frank 1
+JOIN emp AND dept WHERE dept_id = dept_id AND PRINT 3 emp_id 1 name 1 dept_name 2
+JOIN emp AND dept WHERE dept_id = dept_id AND PRINT 2 name 1 dept_name 2
+JOIN dept AND emp WHERE dept_id = dept_id AND PRINT 2 dept_name 1 name 2
+JOIN emp AND ghost WHERE dept_id = dept_id AND PRINT 1 name 1
+JOIN ghost AND dept WHERE dept_id = dept_id AND PRINT 1 name 1
+QUIT

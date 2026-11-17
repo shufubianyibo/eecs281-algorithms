@@ -1,0 +1,20 @@
+# BST distinct keys after DELETE — GENERATE must reflect only surviving rows
+CREATE data 2 int string val tag
+INSERT INTO data 8 ROWS
+1 a
+3 b
+1 c
+2 d
+3 e
+4 f
+2 g
+4 h
+GENERATE FOR data bst INDEX ON val
+DELETE FROM data WHERE val = 3
+GENERATE FOR data bst INDEX ON val
+PRINT FROM data 2 val tag WHERE val < 3
+PRINT FROM data 2 val tag WHERE val > 2
+DELETE FROM data WHERE val > 3
+GENERATE FOR data bst INDEX ON val
+PRINT FROM data 2 val tag ALL
+QUIT

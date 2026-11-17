@@ -1,0 +1,16 @@
+# BST index must return results in sorted order, not insertion order
+CREATE nums 2 int string val label
+INSERT INTO nums 5 ROWS
+30 thirty
+10 ten
+50 fifty
+20 twenty
+40 forty
+GENERATE FOR nums bst INDEX ON val
+# = operator: single key
+PRINT FROM nums 2 val label WHERE val = 30
+# < operator: must be sorted ascending
+PRINT FROM nums 2 val label WHERE val < 35
+# > operator: must be sorted ascending
+PRINT FROM nums 2 val label WHERE val > 25
+QUIT

@@ -1,0 +1,12 @@
+# distance mod speed != 0
+quiver-capacity: 1
+random-seed: 10
+max-rand-distance: 100
+max-rand-speed: 20
+max-rand-health: 5
+---
+round: 1
+random-zombies: 0
+named-zombies: 2
+Far_HighHP  distance: 29 speed: 10 health: 100
+Close_LowHP distance: 20 speed: 10 health: 1

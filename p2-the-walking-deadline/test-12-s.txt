@@ -1,0 +1,16 @@
+# large round
+quiver-capacity: 5
+random-seed: 100
+max-rand-distance: 20
+max-rand-speed: 5
+max-rand-health: 2
+---
+round: 1
+random-zombies: 3
+named-zombies: 1
+EarlyDeath distance: 10 speed: 10 health: 3
+---
+round: 15
+random-zombies: 2
+named-zombies: 1
+LateBorn distance: 30 speed: 5 health: 5

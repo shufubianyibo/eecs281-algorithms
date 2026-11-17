@@ -1,0 +1,16 @@
+# Hash index only helps for =, not < or >
+CREATE scores 2 int string val name
+INSERT INTO scores 6 ROWS
+30 thirty
+10 ten
+50 fifty
+20 twenty
+40 forty
+15 fifteen
+GENERATE FOR scores hash INDEX ON val
+PRINT FROM scores 2 val name WHERE val = 30
+PRINT FROM scores 2 val name WHERE val < 25
+PRINT FROM scores 2 val name WHERE val > 35
+DELETE FROM scores WHERE val < 20
+PRINT FROM scores 2 val name ALL
+QUIT

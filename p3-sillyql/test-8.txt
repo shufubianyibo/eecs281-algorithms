@@ -1,0 +1,21 @@
+# BST ordering on string and double types
+CREATE words 2 string int word freq
+INSERT INTO words 5 ROWS
+cherry 3
+apple 7
+elderberry 1
+banana 5
+date 2
+GENERATE FOR words bst INDEX ON word
+PRINT FROM words 2 word freq WHERE word > apple
+PRINT FROM words 2 word freq WHERE word < cherry
+CREATE prices 2 double string cost item
+INSERT INTO prices 4 ROWS
+3.14 pi
+1.41 root2
+2.72 e
+0.57 gamma
+GENERATE FOR prices bst INDEX ON cost
+PRINT FROM prices 2 cost item WHERE cost < 2.0
+PRINT FROM prices 2 cost item WHERE cost > 1.5
+QUIT

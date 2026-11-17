@@ -1,0 +1,48 @@
+CREATE WHERE 3 int string int ALL FROM WHERE
+INSERT INTO WHERE 3 ROWS
+1 one 10
+2 two 20
+3 three 30
+PRINT FROM WHERE 2 ALL FROM WHERE WHERE = 20
+PRINT FROM WHERE 2 ALL FROM ALL
+CREATE hashtest 2 int string id val
+INSERT INTO hashtest 4 ROWS
+40 d
+10 a
+30 c
+20 b
+GENERATE FOR hashtest hash INDEX ON id
+PRINT FROM hashtest 2 id val WHERE id < 35
+CREATE jleft 2 int string id val
+INSERT INTO jleft 2 ROWS
+1 keep
+2 keep_two
+CREATE jright 2 int string id val
+INSERT INTO jright 3 ROWS
+1 bad_match
+1 good_match
+2 good_match_two
+GENERATE FOR jright hash INDEX ON id
+DELETE FROM jright WHERE val = bad_match
+JOIN jleft AND jright WHERE id = id AND PRINT 2 val 1 val 2
+CREATE coltest 3 int int int a b c
+INSERT INTO coltest 2 ROWS
+1 2 3
+4 5 6
+PRINT FROM coltest 4 a a b a WHERE c = 6
+CREATE empty1 1 int id
+CREATE empty2 1 int id
+JOIN empty1 AND jright WHERE id = id AND PRINT 2 id 1 val 2
+JOIN jleft AND empty2 WHERE id = id AND PRINT 1 val 1
+CREATE bst_ties 2 int string id val
+INSERT INTO bst_ties 5 ROWS
+10 a
+10 b
+10 c
+20 d
+10 e
+GENERATE FOR bst_ties bst INDEX ON id
+DELETE FROM bst_ties WHERE val = b
+DELETE FROM bst_ties WHERE val = d
+PRINT FROM bst_ties 2 id val WHERE id = 10
+QUIT

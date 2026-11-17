@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Connected Components AG Problem",
+    "source_files": 1,
+    "source_lines_including_scaffolding": 112,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 6
+  },
+  {
+    "name": "Hash Table Starter Files",
+    "source_files": 2,
+    "source_lines_including_scaffolding": 216,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 3
+  },
+  {
+    "name": "p4-among-us",
+    "source_files": 2,
+    "source_lines_including_scaffolding": 347,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 41
+  },
+  {
+    "name": "AVL Tree Starter Files",
+    "source_files": 2,
+    "source_lines_including_scaffolding": 387,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 3
+  },
+  {
+    "name": "Autograder Starter Files",
+    "source_files": 2,
+    "source_lines_including_scaffolding": 868,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 3
+  },
+  {
+    "name": "p3-sillyql",
+    "source_files": 4,
+    "source_lines_including_scaffolding": 910,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 34
+  },
+  {
+    "name": "p1-rescue-the-countess",
+    "source_files": 6,
+    "source_lines_including_scaffolding": 727,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 39
+  },
+  {
+    "name": "p2-the-walking-deadline",
+    "source_files": 7,
+    "source_lines_including_scaffolding": 703,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 26
+  },
+  {
+    "name": "l01-music-sorting-main",
+    "source_files": 6,
+    "source_lines_including_scaffolding": 604,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 12
+  },
+  {
+    "name": "p2b-priority-queues",
+    "source_files": 7,
+    "source_lines_including_scaffolding": 1213,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 10
+  },
+  {
+    "name": "p0-statistics",
+    "source_files": 1,
+    "source_lines_including_scaffolding": 225,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 4
+  },
+  {
+    "name": "Anyfi__Starter_Files_export",
+    "source_files": 3,
+    "source_lines_including_scaffolding": 67,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 4
+  },
+  {
+    "name": "String_Library_Starter_Files_export",
+    "source_files": 3,
+    "source_lines_including_scaffolding": 2005,
+    "origin": null,
+    "snapshot_commit": null,
+    "file_count": 5
+  }
+]

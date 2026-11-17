@@ -1,0 +1,14 @@
+# large difference health
+quiver-capacity: 1
+random-seed: 10
+max-rand-distance: 100
+max-rand-speed: 20
+max-rand-health: 5
+---
+round: 1
+random-zombies: 0
+named-zombies: 4
+A_Slow_HighHP  distance: 20 speed: 2 health: 100
+B_Fast_HighHP  distance: 20 speed: 10 health: 100
+C_Fast_LowHP   distance: 20 speed: 10 health: 5
+D_Fast_LowHP   distance: 20 speed: 10 health: 5

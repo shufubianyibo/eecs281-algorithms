@@ -1,0 +1,16 @@
+# PRINT WHERE with 0 matching rows 
+CREATE emp 3 string int double name id salary
+INSERT INTO emp 4 ROWS
+Alice 1 50000.0
+Bob 2 60000.0
+Carol 3 70000.0
+Dave 4 80000.0
+PRINT FROM emp 2 name id WHERE name = Zara
+PRINT FROM emp 2 id salary WHERE id = 99
+PRINT FROM emp 1 name WHERE salary > 100000.0
+GENERATE FOR emp hash INDEX ON id
+PRINT FROM emp 2 name id WHERE id = 99
+GENERATE FOR emp bst INDEX ON salary
+PRINT FROM emp 2 name salary WHERE salary > 100000.0
+PRINT FROM emp 2 name salary WHERE salary < 1.0
+QUIT

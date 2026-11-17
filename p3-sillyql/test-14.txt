@@ -1,0 +1,41 @@
+CREATE emp_vec 2 int string id val
+INSERT INTO emp_vec 2 ROWS
+100 target_one
+100 target_two
+GENERATE FOR emp_vec hash INDEX ON id
+DELETE FROM emp_vec WHERE id = 100
+PRINT FROM emp_vec 2 id val WHERE id = 100
+CREATE reset_test 2 int string id val
+INSERT INTO reset_test 1 ROWS
+1 old_data
+GENERATE FOR reset_test hash INDEX ON id
+REMOVE reset_test
+CREATE reset_test 2 double int score id
+INSERT INTO reset_test 1 ROWS
+99.9 1
+PRINT FROM reset_test 2 score id WHERE id = 1
+CREATE bool_bst 3 bool string int flag name id
+INSERT INTO bool_bst 4 ROWS
+true a 1
+false b 2
+true c 3
+false d 4
+GENERATE FOR bool_bst bst INDEX ON flag
+PRINT FROM bool_bst 2 name id WHERE flag < true
+PRINT FROM bool_bst 2 name id WHERE flag > false
+CREATE t_out 1 int id
+INSERT INTO t_out 1 ROWS
+5
+CREATE t_in 2 int string id val
+INSERT INTO t_in 3 ROWS
+5 first
+5 second
+5 third
+GENERATE FOR t_in bst INDEX ON id
+JOIN t_out AND t_in WHERE id = id AND PRINT 2 id 1 val 2
+CREATE pure_empty 2 int string id val
+GENERATE FOR pure_empty bst INDEX ON id
+PRINT FROM pure_empty 2 id val WHERE id = 1
+DELETE FROM pure_empty WHERE id = 1
+GENERATE FOR pure_empty hash INDEX ON val
+QUIT

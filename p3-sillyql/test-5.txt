@@ -1,0 +1,21 @@
+# Test GENERATE hash and bst index, then PRINT WHERE
+CREATE products 3 int string double pid category price
+INSERT INTO products 8 ROWS
+1 fruit 1.20
+2 veggie 0.80
+3 fruit 2.50
+4 dairy 3.00
+5 veggie 1.10
+6 fruit 0.60
+7 dairy 4.50
+8 veggie 2.20
+GENERATE FOR products hash INDEX ON category
+PRINT FROM products 2 pid price WHERE category = fruit
+PRINT FROM products 2 pid price WHERE category = dairy
+GENERATE FOR products bst INDEX ON price
+PRINT FROM products 2 pid category WHERE price < 1.50
+PRINT FROM products 2 pid category WHERE price > 3.00
+PRINT FROM products 2 pid category WHERE price = 2.20
+GENERATE FOR ghost hash INDEX ON category
+GENERATE FOR products hash INDEX ON ghost
+QUIT

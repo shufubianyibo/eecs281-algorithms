@@ -1,0 +1,11 @@
+M
+2
+3
+// Room 0: Start at (0,0), Pipe '1' at (0,2) leads to Room 1
+..1
+...
+...
+// Room 1: Arrival at (0,2), Countess at (2,0)
+..#
+..#
+C..

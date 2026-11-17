@@ -1,0 +1,20 @@
+# Index must be updated when rows are inserted after GENERATE
+CREATE log 2 string int level code
+INSERT INTO log 3 ROWS
+warn 100
+error 200
+info 300
+GENERATE FOR log hash INDEX ON level
+# Insert more rows — these must be added to the existing index
+INSERT INTO log 3 ROWS
+error 400
+info 500
+error 600
+PRINT FROM log 2 level code WHERE level = error
+PRINT FROM log 2 level code WHERE level = info
+GENERATE FOR log bst INDEX ON code
+INSERT INTO log 2 ROWS
+warn 150
+error 250
+PRINT FROM log 2 code level WHERE code > 200
+QUIT

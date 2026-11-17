@@ -1,0 +1,12 @@
+# sort test
+quiver-capacity: 500000
+random-seed: 10
+max-rand-distance: 1000000
+max-rand-speed: 10
+max-rand-health: 10
+---
+round: 1
+random-zombies: 500000
+named-zombies: 2
+SlowPoke distance: 5 speed: 1 health: 5
+FastBoy distance: 12 speed: 4 health: 1
